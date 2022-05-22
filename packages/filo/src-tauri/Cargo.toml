@@ -1,11 +1,11 @@
 [package]
-name = "app"
+name = "filo"
 version = "0.1.0"
-description = "A Tauri App"
+description = "Filo is an IRC3 client"
 authors = ["you"]
 license = ""
 repository = ""
-default-run = "app"
+default-run = "filo"
 edition = "2021"
 rust-version = "1.57"
 
