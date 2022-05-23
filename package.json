@@ -1,9 +1,11 @@
 {
-  "name": "filo",
+  "name": "filo-mono",
   "version": "0.0.1",
   "description": "File is a IRC3 client.",
   "main": "index.js",
   "scripts": {
+    "dev": "pnpm run tauri:dev --filter=filo",
+    "build": "pnpm run tauri:build --filter=filo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
