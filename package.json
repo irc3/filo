@@ -4,10 +4,10 @@
   "description": "File is a IRC3 client.",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm run dev --filter=filo",
-    "build": "pnpm run build --filter=filo",
-    "tauri:dev": "pnpm run tauri:dev --filter=filo",
-    "tauri:build": "pnpm run tauri:build --filter=filo",
+    "dev": "pnpm run --filter filo dev",
+    "build": "pnpm run --filter filo -r build",
+    "tauri:dev": "pnpm run --filter filo tauri:dev",
+    "tauri:build": "pnpm run --filter filo tauri:build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
