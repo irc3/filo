@@ -1,6 +1,6 @@
 {
   "name": "filo",
-  "version": "0.1.1",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "@tauri-apps/api": "1.0.0-rc.5",
@@ -24,7 +24,8 @@
     "eject": "react-scripts eject",
     "tauri": "tauri",
     "tauri:dev": "tauri dev",
-    "tauri:build": "tauri build"
+    "tauri:build": "tauri build",
+    "postversion": "cd src-tauri && cargo bump \"${npm_package_version}\""
   },
   "eslintConfig": {
     "extends": [
