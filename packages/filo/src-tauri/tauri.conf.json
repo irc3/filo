@@ -7,8 +7,7 @@
     "distDir": "../build"
   },
   "package": {
-    "productName": "filo",
-    "version": "0.1.1"
+    "productName": "filo"
   },
   "tauri": {
     "allowlist": {
@@ -30,7 +29,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.filo.dev",
+      "identifier": "com.irc3.filo",
       "longDescription": "IRC3 client",
       "macOS": {
         "entitlements": null,

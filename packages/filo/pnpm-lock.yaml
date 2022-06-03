@@ -4,7 +4,7 @@ specifiers:
   '@babel/core': ^7.18.0
   '@babel/plugin-syntax-flow': ^7.17.12
   '@babel/plugin-transform-react-jsx': ^7.17.12
-  '@tauri-apps/api': ^1.0.0-rc.5
+  '@tauri-apps/api': 1.0.0-rc.5
   '@tauri-apps/cli': ^1.0.0-rc.10
   '@testing-library/dom': 7.21.4
   '@testing-library/jest-dom': ^5.16.4
