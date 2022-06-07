@@ -66,6 +66,10 @@
         "title": "Filo",
         "width": 1200
       }
-    ]
+    ],
+    "systemTray": {
+      "iconPath": "icons/icon.png",
+      "iconAsTemplate": false
+    }
   }
 }
