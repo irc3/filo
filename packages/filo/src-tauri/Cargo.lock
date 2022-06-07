@@ -664,7 +664,7 @@ dependencies = [
 
 [[package]]
 name = "filo"
-version = "0.0.1"
+version = "0.0.2"
 dependencies = [
  "serde",
  "serde_json",
