@@ -3,7 +3,7 @@
     windows_subsystem = "windows"
 )]
 
-use tauri::{AboutMetadata, CustomMenuItem, Menu, MenuItem, Submenu, SystemTray};
+use tauri::{AboutMetadata, Manager, Menu, MenuItem, Submenu, SystemTray, SystemTrayEvent};
 
 fn build_menu() -> Menu {
     let app_name = "Filo";
@@ -78,9 +78,8 @@ fn build_menu() -> Menu {
         // Help
         menu = menu.add_submenu(Submenu::new(
             "Help",
-            Menu::new()
-                // should open url when clicked:
-                // .add_item(MenuItem::Url("Learn More", url)),
+            Menu::new(), // should open url when clicked:
+                         // .add_item(MenuItem::Url("Learn More", url)),
         ));
 
         menu
@@ -95,6 +94,42 @@ fn main() {
     tauri::Builder::default()
         .menu(menu)
         .system_tray(system_tray)
+        .on_system_tray_event(|app, event| match event {
+            SystemTrayEvent::LeftClick {
+                position: _,
+                size: _,
+                ..
+            } => {
+                let window = app.get_window("main").unwrap();
+                window.show().unwrap();
+                window.set_focus().unwrap();
+            }
+            SystemTrayEvent::RightClick {
+                position: _,
+                size: _,
+                ..
+            } => {
+                println!("system tray received a right click");
+            }
+            SystemTrayEvent::DoubleClick {
+                position: _,
+                size: _,
+                ..
+            } => {
+                println!("system tray received a double click");
+            }
+            SystemTrayEvent::MenuItemClick { id, .. } => match id.as_str() {
+                "quit" => {
+                    std::process::exit(0);
+                }
+                "hide" => {
+                    let window = app.get_window("main").unwrap();
+                    window.hide().unwrap();
+                }
+                _ => {}
+            },
+            _ => {}
+        })
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
