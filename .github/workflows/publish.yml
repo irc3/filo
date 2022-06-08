@@ -33,7 +33,7 @@ jobs:
       if: matrix.platform == 'ubuntu-latest'
       run: |
         sudo apt-get update
-        sudo apt-get install -y libgtk-3-dev webkit2gtk-4.0 libappindicator3-dev librsvg2-dev patchelf
+        sudo apt-get install -y libgtk-3-dev webkit2gtk-4.0 libappindicator3-dev librsvg2-dev patchelf libayatana-appindicator3-dev
     - name: install dependencies and build app
       run: pnpm i -r && npm run build
     - uses: tauri-apps/tauri-action@v0
@@ -46,5 +46,5 @@ jobs:
         tagName: "v__VERSION__" # the action automatically replaces \_\_VERSION\_\_ with the app version
         releaseName: "v__VERSION__"
         releaseBody: "See the assets to download this version and install."
-        releaseDraft: false 
+        releaseDraft: false
         prerelease: false
