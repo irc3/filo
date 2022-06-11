@@ -1,3 +1,7 @@
+/**
+ * 此文件暂时没有被用到，因为现在使用的是 tauri 自带的 dialog
+ */
+
 import { useState, useEffect } from 'react'
 import { checkUpdate, installUpdate, UpdateManifest } from '@tauri-apps/api/updater'
 import { relaunch } from '@tauri-apps/api/process'

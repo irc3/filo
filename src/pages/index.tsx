@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Image from 'components/image'
+import useTranslation from 'hooks/useTranslation';
 // import { event } from '@tauri-apps/api'
 // import { useTauriUpdater } from './hooks';
 
 // const { listen } = event
 
-function App() {
+export default function Index() {
   // const updater = useTauriUpdater()
+  const { t } = useTranslation()
 
   useEffect(() => {
     // listen status change
@@ -21,9 +22,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Image src='/logo.svg' className="App-logo" alt="logo" width={100} height={100} />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Edit <code>src/pages/index.tsx</code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -31,11 +32,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          {t('hello', 'Hello World')}
         </a>
       </header>
     </div>
   );
 }
-
-export default App;
