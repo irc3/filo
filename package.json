@@ -3,6 +3,8 @@
   "version": "0.0.2",
   "private": true,
   "dependencies": {
+    "@emmda-design/icons": "^0.0.3",
+    "@emmda-design/react": "^0.0.3",
     "@tauri-apps/api": "1.0.0-rc.5",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
@@ -11,27 +13,24 @@
     "@types/node": "^16.11.33",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.3",
+    "next": "^12.1.6",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-scripts": "5.0.1",
+    "react-helmet": "^6.1.0",
     "typescript": "^4.6.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "web3-ui": "^1.2.3"
   },
   "scripts": {
-    "start": "cross-env BROWSER=none PORT=6872 react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "dev": "cross-env PORT=6872 next dev",
+    "clean": "rimraf dist",
+    "lint": "next lint",
+    "build": "npm run clean && next build && next export -o dist",
+    "start": "npm run dev",
     "tauri": "tauri",
     "tauri:dev": "tauri dev",
     "tauri:build": "tauri build",
     "postversion": "cd src-tauri && cargo bump \"${npm_package_version}\""
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -52,6 +51,13 @@
     "@tauri-apps/cli": "^1.0.0-rc.10",
     "@testing-library/dom": "7.21.4",
     "@types/testing-library__jest-dom": "^5.14.3",
-    "cross-env": "^7.0.3"
+    "autoprefixer": "^10.4.7",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.17.0",
+    "eslint-config-next": "^12.1.6",
+    "eslint-config-prettier": "^8.5.0",
+    "postcss": "^8.4.14",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^3.1.2"
   }
 }
