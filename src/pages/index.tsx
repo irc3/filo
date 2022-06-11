@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Image from 'components/image'
+import useTranslation from 'hooks/useTranslation';
 // import { event } from '@tauri-apps/api'
 // import { useTauriUpdater } from './hooks';
 
@@ -7,6 +8,7 @@ import Image from 'components/image'
 
 export default function Index() {
   // const updater = useTauriUpdater()
+  const { t } = useTranslation()
 
   useEffect(() => {
     // listen status change
@@ -20,7 +22,7 @@ export default function Index() {
   return (
     <div className="App">
       <header className="App-header">
-        <Image src='/logo.svg' className="App-logo" alt="logo" />
+        <Image src='/logo.svg' className="App-logo" alt="logo" width={100} height={100} />
         <p>
           Edit <code>src/pages/index.tsx</code> and save to reload.
         </p>
@@ -30,7 +32,7 @@ export default function Index() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          {t('hello', 'Hello World')}
         </a>
       </header>
     </div>
