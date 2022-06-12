@@ -3,8 +3,9 @@
   "version": "0.0.2",
   "private": true,
   "dependencies": {
-    "@emmda-design/icons": "^0.0.3",
+    "@emmda-design/icons": "0.0.4",
     "@emmda-design/react": "^0.0.3",
+    "@emmda-design/utils": "^0.0.2",
     "@fluent/bundle": "^0.17.1",
     "@fluent/langneg": "^0.6.2",
     "@tauri-apps/api": "1.0.0-rc.5",

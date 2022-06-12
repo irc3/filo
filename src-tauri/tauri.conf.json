@@ -64,12 +64,14 @@
         "height": 800,
         "resizable": true,
         "title": "Filo",
-        "width": 1200
+        "width": 1200,
+        "decorations": false,
+        "transparent": true
       }
     ],
     "systemTray": {
       "iconPath": "icons/trayicon.png",
-      "iconAsTemplate": false
+      "iconAsTemplate": true
     }
   }
 }
