@@ -4,12 +4,12 @@ specifiers:
   '@babel/core': ^7.18.0
   '@babel/plugin-syntax-flow': ^7.17.12
   '@babel/plugin-transform-react-jsx': ^7.17.12
-  '@emmda-design/icons': 0.0.4
-  '@emmda-design/react': ^0.0.3
-  '@emmda-design/utils': ^0.0.2
+  '@emmda-design/icons': 0.0.5
+  '@emmda-design/react': ^0.0.5
+  '@emmda-design/utils': 0.0.5
   '@fluent/bundle': ^0.17.1
   '@fluent/langneg': ^0.6.2
-  '@tauri-apps/api': 1.0.0-rc.5
+  '@tauri-apps/api': 1.0.2
   '@tauri-apps/cli': ^1.0.0-rc.10
   '@testing-library/dom': 7.21.4
   '@testing-library/jest-dom': ^5.16.4
@@ -39,12 +39,12 @@ specifiers:
   web3-ui: ^1.2.3
 
 dependencies:
-  '@emmda-design/icons': 0.0.4_react@18.1.0
-  '@emmda-design/react': 0.0.3_ef5jwxihqo6n7gxfmzogljlgcm
-  '@emmda-design/utils': 0.0.2
+  '@emmda-design/icons': 0.0.5_react@18.1.0
+  '@emmda-design/react': 0.0.5_ef5jwxihqo6n7gxfmzogljlgcm
+  '@emmda-design/utils': 0.0.5
   '@fluent/bundle': 0.17.1
   '@fluent/langneg': 0.6.2
-  '@tauri-apps/api': 1.0.0-rc.5
+  '@tauri-apps/api': 1.0.2
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 13.3.0_ef5jwxihqo6n7gxfmzogljlgcm
   '@testing-library/user-event': 13.5.0_zbypwrtvpjrvnfnw5wxfpjfsci
@@ -1101,63 +1101,50 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /@emmda-design/hooks/0.0.3_ef5jwxihqo6n7gxfmzogljlgcm:
-    resolution: {integrity: sha512-FOD1FqFBFafuDDdPrc3/ODmF+/i9c8XEKqa2YmkBjY8jMD/frAaACS1Z45DLL6E6bHkvkGQ/qIIhIT+4di6PcQ==}
+  /@emmda-design/hooks/0.0.5_ef5jwxihqo6n7gxfmzogljlgcm:
+    resolution: {integrity: sha512-qnOykVRlfy7J0gi+eDcSIy27fOsRKQCRwmoDHyWI9Azrz9ZQ8n+WKIB1gv1esTbY6p+4IR+Ku0PEWvAYB3Ap2Q==}
     peerDependencies:
       react: '>16.8.0'
       react-dom: '>16.8.0'
     dependencies:
+      '@use-it/event-listener': 0.1.7_react@18.1.0
       react: 18.1.0
       react-dom: 18.1.0_react@18.1.0
     dev: false
 
-  /@emmda-design/icons/0.0.3_react@18.1.0:
-    resolution: {integrity: sha512-g7BA8NxqbzPP3kSnVYZKZAxNEB5kp1w/rdHGeJGjfrujqVYBz8dL2RymXGM7APARQZGdUtKo3paG+LPwcYSw4w==}
+  /@emmda-design/icons/0.0.5_react@18.1.0:
+    resolution: {integrity: sha512-Gepfmp2idUU1HnhmY7DiuGq72nQLRDI/Dj6f2qaKmra4ya0JL5eA1Cc/qMEAliNzZhhtqtOVz4R15t6mWLmVRA==}
     dependencies:
+      '@emmda-design/utils': 0.0.5
       '@heroicons/react': 1.0.6_react@18.1.0
     transitivePeerDependencies:
       - react
     dev: false
 
-  /@emmda-design/icons/0.0.4_react@18.1.0:
-    resolution: {integrity: sha512-3R3np2hOOuC65FFbcfjqkhLUl7Tf1JzvACvkexRyEwIc/b/8r/IsPsBoxjfyDgF4kuxnoB5zrKqau/94XM5bqg==}
+  /@emmda-design/react/0.0.5_ef5jwxihqo6n7gxfmzogljlgcm:
+    resolution: {integrity: sha512-pScnKBceae1bvnd8qxSON+w2wzbqE1/I2XSZfTIV6fhw+S2ySfL8S1IMaY+S3rcPNkSJVXVsulvsLeHMAX4q4w==}
     dependencies:
-      '@emmda-design/utils': 0.0.1
-      '@heroicons/react': 1.0.6_react@18.1.0
-    transitivePeerDependencies:
-      - react
-    dev: false
-
-  /@emmda-design/react/0.0.3_ef5jwxihqo6n7gxfmzogljlgcm:
-    resolution: {integrity: sha512-IhGNKdZAy1ERJW4m/XWV0VeS9oT4r/YlLSnmmagxqAALC2AK1SC2BoaCdA9AtlLOuksjdawD5oFTUmT3UJUlKQ==}
-    dependencies:
-      '@emmda-design/hooks': 0.0.3_ef5jwxihqo6n7gxfmzogljlgcm
-      '@emmda-design/icons': 0.0.3_react@18.1.0
-      '@emmda-design/stateless': 0.0.3_ef5jwxihqo6n7gxfmzogljlgcm
+      '@emmda-design/hooks': 0.0.5_ef5jwxihqo6n7gxfmzogljlgcm
+      '@emmda-design/icons': 0.0.5_react@18.1.0
+      '@emmda-design/stateless': 0.0.5_ef5jwxihqo6n7gxfmzogljlgcm
     transitivePeerDependencies:
       - react
       - react-dom
     dev: false
 
-  /@emmda-design/stateless/0.0.3_ef5jwxihqo6n7gxfmzogljlgcm:
-    resolution: {integrity: sha512-ubAJkGR8nCYvvI6olxWTaJeV4KbA6OIfDmYdepfCNynXanudAxSRyWhj+Cd4AwJeAjhzLTPlq96DbpIFMu0rSg==}
+  /@emmda-design/stateless/0.0.5_ef5jwxihqo6n7gxfmzogljlgcm:
+    resolution: {integrity: sha512-pyvEhM2D/Srxi6PQThyrdSsvmhSONkuNfqY9s191hjcoOe5g6w70EySB6xx1x4g7lR1qgurAtO46oIN/EpZ2TA==}
     peerDependencies:
       react: '>16.8.0'
       react-dom: '>16.8.0'
     dependencies:
+      '@emmda-design/utils': 0.0.5
       react: 18.1.0
       react-dom: 18.1.0_react@18.1.0
     dev: false
 
-  /@emmda-design/utils/0.0.1:
-    resolution: {integrity: sha512-FtSZsaWasQvcnB4zcegKN4e5yBza6LhDBFp6baydI3b7YdiSTq8R1Sp1eiI3U8qgy7D3eJuMhEaSrQJWtQ3PcQ==}
-    dependencies:
-      lodash-es: 4.17.21
-      tailwind-merge: 0.9.0
-    dev: false
-
-  /@emmda-design/utils/0.0.2:
-    resolution: {integrity: sha512-NV0M3qqO57w2MQPM4j6O78nOndM1lf82MEDYVVuPVEF2fPfn9H31dC4L7gAeScYMVQhWFxdkjIKQNAgEl/HWmQ==}
+  /@emmda-design/utils/0.0.5:
+    resolution: {integrity: sha512-5x18IqFrO+ckvbFUMhjfKKlOO7ZNkg91wFVHx0UC/XBjhQzIccsO5EzcjF239ehV/MuUhpkZU/CtuKUZ7Z5yKg==}
     dependencies:
       lodash-es: 4.17.21
       tailwind-merge: 0.9.0
@@ -1562,11 +1549,9 @@ packages:
     resolution: {integrity: sha512-WiBSI6JBIhC6LRIsB2Kwh8DsGTlbBU+mLRxJmAe3LjHTdkDpwIbEOZgoXBbZilk/vlfjK8i6nKRAvIRn1XaIMw==}
     dev: true
 
-  /@tauri-apps/api/1.0.0-rc.5:
-    resolution: {integrity: sha512-IiQg7pLByl/W3KRx9Whn1EWh9ZrBojkl9FAgCRJ4//e58var1WmNPHA92YC0i0DLSIF0JLLp0EQKRHJa+aaqlQ==}
-    engines: {node: '>= 12.13.0', npm: '>= 6.6.0', yarn: '>= 1.19.1'}
-    dependencies:
-      type-fest: 2.12.2
+  /@tauri-apps/api/1.0.2:
+    resolution: {integrity: sha512-yuNW0oeJ1/ZA7wNF1KgxhHrSu5viPVzY/UgUczzN5ptLM8dH15Juy5rEGkoHfeXGju90Y/l22hi3BtIrp/za+w==}
+    engines: {node: '>= 12.22.0', npm: '>= 6.6.0', yarn: '>= 1.19.1'}
     dev: false
 
   /@tauri-apps/cli-darwin-arm64/1.0.0-rc.13:
@@ -1874,6 +1859,14 @@ packages:
       '@typescript-eslint/types': 5.28.0
       eslint-visitor-keys: 3.3.0
     dev: true
+
+  /@use-it/event-listener/0.1.7_react@18.1.0:
+    resolution: {integrity: sha512-hgfExDzUU9uTRTPDCpw2s9jWTxcxmpJya3fK5ADpf5VDpSy8WYwY/kh28XE0tUcbsljeP8wfan48QvAQTSSa3Q==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.1.0
+    dev: false
 
   /acorn-jsx/5.3.2_acorn@8.7.1:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -4165,11 +4158,6 @@ packages:
     resolution: {integrity: sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==}
     engines: {node: '>=10'}
     dev: true
-
-  /type-fest/2.12.2:
-    resolution: {integrity: sha512-qt6ylCGpLjZ7AaODxbpyBZSs9fCI9SkL3Z9q2oxMBQhs/uyY+VD8jHA8ULCGmWQJlBgqvO3EJeAngOHD8zQCrQ==}
-    engines: {node: '>=12.20'}
-    dev: false
 
   /typescript/4.7.3:
     resolution: {integrity: sha512-WOkT3XYvrpXx4vMMqlD+8R8R37fZkjyLGlxavMc4iB8lrl8L0DeTcHbYgw/v0N/z9wAFsgBhcsF0ruoySS22mA==}
