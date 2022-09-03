@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
 import WalletConnect from "@walletconnect/client";
-import { WalletSession } from 'types';
 import { cloneDeep } from 'lodash-es'
 import QRCodeModal from "@walletconnect/qrcode-modal";
+import { useAtom } from 'jotai'
+import { connectedAtom, profileAtom } from 'atoms';
 
 const useWalletConnect = () => {
-  const [connected, setConnected] = useState(false)
-  const [profile, setProfile] = useState<WalletSession | null>(null)
+  const [connected, setConnected] = useAtom(connectedAtom)
+  const [profile, setProfile] = useAtom(profileAtom)
 
   // Create a connector
   const [connector] = useState<WalletConnect>(() => {
@@ -17,6 +18,9 @@ const useWalletConnect = () => {
         desktopLinks: [] // disable desktop links
       }
     });
+
+    setConnected(newConnector.connected)
+    setProfile(newConnector.connected ? cloneDeep(newConnector.session) : null)
 
     // Subscribe to connection events
     newConnector.on("connect", (error, payload) => {
