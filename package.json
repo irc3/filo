@@ -1,30 +1,73 @@
 {
-  "name": "filo-mono",
-  "version": "0.1.1",
-  "description": "File is a IRC3 client.",
-  "main": "index.js",
+  "name": "filo",
+  "version": "0.0.2",
+  "private": true,
+  "dependencies": {
+    "@emmda-design/icons": "0.0.5",
+    "@emmda-design/react": "^0.0.5",
+    "@emmda-design/utils": "0.0.5",
+    "@fluent/bundle": "^0.17.1",
+    "@fluent/langneg": "^0.6.2",
+    "@tauri-apps/api": "1.0.2",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.0",
+    "@types/node": "^16.11.33",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.3",
+    "@walletconnect/client": "^1.8.0",
+    "@walletconnect/qrcode-modal": "^1.8.0",
+    "@walletconnect/types": "^1.8.0",
+    "axios": "^0.27.2",
+    "intl-pluralrules": "^1.3.1",
+    "jotai": "^1.8.2",
+    "lodash-es": "^4.17.21",
+    "next": "^12.1.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-helmet": "^6.1.0",
+    "typescript": "^4.6.4",
+    "web-vitals": "^2.1.4"
+  },
   "scripts": {
-    "dev": "pnpm run --filter filo dev",
-    "build": "pnpm run --filter filo -r build",
-    "tauri:dev": "pnpm run --filter filo tauri:dev",
-    "tauri:build": "pnpm run --filter filo tauri:build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "cross-env PORT=6872 next dev",
+    "clean": "rimraf dist",
+    "lint": "next lint",
+    "build": "npm run clean && next build && next export -o dist",
+    "start": "npm run dev",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build",
+    "postversion": "cd src-tauri && cargo bump \"${npm_package_version}\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/irc3/filo.git"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
-  "keywords": [
-    "filo",
-    "irc3"
-  ],
-  "author": "banyudu <banyudu@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/irc3/filo/issues"
-  },
-  "homepage": "https://github.com/irc3/filo#readme",
   "devDependencies": {
-    "@tauri-apps/cli": "^1.0.0-rc.10"
+    "@babel/core": "^7.18.0",
+    "@babel/plugin-syntax-flow": "^7.17.12",
+    "@babel/plugin-transform-react-jsx": "^7.17.12",
+    "@tauri-apps/cli": "^1.0.5",
+    "@testing-library/dom": "7.21.4",
+    "@types/lodash-es": "^4.17.6",
+    "@types/testing-library__jest-dom": "^5.14.3",
+    "autoprefixer": "^10.4.7",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.17.0",
+    "eslint-config-next": "^12.1.6",
+    "eslint-config-prettier": "^8.5.0",
+    "postcss": "^8.4.14",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^3.1.2"
   }
 }
