@@ -6,7 +6,6 @@ export default function Index() {
   const { t } = useTranslation()
 
   const profile = useProfile()
-  console.log('profile is: ', profile)
 
   return (
     <div className="home flex justify-center items-center">

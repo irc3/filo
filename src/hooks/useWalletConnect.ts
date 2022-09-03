@@ -31,8 +31,8 @@ const useWalletConnect = () => {
       setConnected(true)
 
       // Get provided accounts and chainId
-      console.log('payload is: ', payload)
-      setProfile(cloneDeep(payload.params?.[0] ?? null))
+      setProfile(cloneDeep(newConnector.session))
+      QRCodeModal.close()
     });
 
     newConnector.on("session_update", (error, payload) => {
@@ -41,7 +41,7 @@ const useWalletConnect = () => {
       }
 
       // Get updated accounts and chainId
-      setProfile(cloneDeep(payload.params?.[0] ?? null))
+      setProfile(cloneDeep(newConnector.session))
     });
 
     newConnector.on("disconnect", (error, payload) => {
@@ -61,6 +61,12 @@ const useWalletConnect = () => {
       setProfile(cloneDeep(connector.session))
     }
   }, [])
+
+  // useEffect(() => {
+  //   if (connected) {
+  //     setProfile(cloneDeep(connector.session))
+  //   }
+  // }, [connected])
 
   // show qrcode
   const connect = () => {

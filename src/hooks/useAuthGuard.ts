@@ -11,7 +11,7 @@ const useAuthGuard = () => {
 
   useEffect(() => {
     if (!connected && !isLoginPage) {
-      router.push('/login')
+      router.push(`/login?callback=${encodeURIComponent(router.pathname)}`)
     } else {
       setForbidden(false)
     }

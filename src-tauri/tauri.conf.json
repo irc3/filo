@@ -65,7 +65,6 @@
         "resizable": true,
         "title": "Filo",
         "width": 1200,
-        "decorations": false,
         "transparent": true
       }
     ],
