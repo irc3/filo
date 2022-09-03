@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import Image from 'components/image'
 import useTranslation from 'hooks/useTranslation';
+import { useRouter } from 'next/router'
+import useAuth from 'hooks/useAuth';
 // import { event } from '@tauri-apps/api'
 // import { useTauriUpdater } from './hooks';
 
@@ -19,6 +21,10 @@ export default function Index() {
     // })
   }, [])
 
+  const router = useRouter()
+  const auth = useAuth()
+  console.log('auth is: ', auth)
+
   return (
     <div className="App">
       <header className="App-header">
@@ -34,6 +40,9 @@ export default function Index() {
         >
           {t('hello', 'Hello World')}
         </a>
+        <button onClick={() => router.push('/login')} >
+          {t('login', 'Login')}
+        </button>
       </header>
     </div>
   );
