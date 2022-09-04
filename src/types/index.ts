@@ -15,3 +15,14 @@ export interface WalletSession {
 }
 
 export type Profile = WalletSession
+
+export interface Peer {
+  id: string
+  name: string
+  avatar?: string
+}
+
+export interface Channel {
+  id: string
+  name: string
+}

@@ -5,6 +5,11 @@
 
 use tauri::{AboutMetadata, Manager, Menu, MenuItem, Submenu, SystemTray, SystemTrayEvent};
 
+mod controllers;
+mod types;
+
+use controllers::get_contacts;
+
 fn build_menu() -> Menu {
     let app_name = "Filo";
     let mut menu = Menu::new();
@@ -130,6 +135,7 @@ fn main() {
             },
             _ => {}
         })
+        .invoke_handler(tauri::generate_handler![get_contacts])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
